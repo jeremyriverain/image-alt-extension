@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "name": "Image Alt Extension",
+  "description": "Simple extension to show if images does not have an alt attribute",
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_icon": {
+      "32": "icons/icon_32.png",
+      "64": "icons/icon_64.png",
+      "128": "icons/icon_128.png"
+    },
+    "name": "Image Alt Extension"
+  },
+  "icons": {
+    "32": "icons/icon_32.png",
+    "64": "icons/icon_64.png",
+    "128": "icons/icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
